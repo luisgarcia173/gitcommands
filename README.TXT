@@ -42,6 +42,7 @@ $ git add --all //add new and removed files
 $ git commit -m "Create a README."
 $ git commit -a -m "..." //-a skip staging area
 $ git commit --amend -m "..." //--amend (add to the last commit), -m (new commit message)
+$ git commit -a //merge commit
 
 [[CHAPTER 2: STAGING AND REMOTE]]
 
@@ -58,7 +59,7 @@ $ git checkout -- <file_name> // undo commits
 
 --ADDIND A REMOTE / PUSH TO REPOSITORY
 $ git remote add origin <url_address>
-$ git remote -v
+$ git remote -v //-v (verbose output)
 $ git push -u origin master //origin (remote name), master (local branch)
 
 --SYNC LOCAL REPO (PULL)
@@ -66,3 +67,50 @@ $ git pull
 
 --REMOVE REMOTE
 $ git remote rm <remote_name>
+
+[[CHAPTER 3: CLONING AND BRANCHING]]
+
+--CLONE (CREATE A NEW LOCAL REPO WITH THE SAME REMOTE NAME)
+$ git clone <remote_name>
+$ git clone <remote_name> <new_local_name>
+
+--BRANCH
+$ git branch <branch_name> //create
+$ git checkout <branch_name> //move the pointer to new branch
+$ git checkout -b <branch_name> // create and move to new branch
+
+--MERGE
+$ git checkout master
+$ git merge <branch_name>
+
+[[CHAPTER 4: COLLABORATION BASICS]]
+
+--PULL
+$ git pull //update
+$ git fetch //(Sync)
+
+[[CHAPTER 5: BRANCHING]]
+
+--LIST BRANCHES
+$ git branch //list local branches
+$ git branch  -r // list all remote branches
+
+--REMOTE SHOW
+$ git remote show origin // list all branches configured for push/pull
+
+--REMOVING A BRANCH
+$ git push origin :<branch_name> //remove remotely
+$ git branch -d <branch_name> //locally
+$ git branch -D <branch_name> //locally force
+
+--CLEAN REMOVED REFERENCES
+$ git remote prune origin
+
+--TAGS
+$ git tag //list all tags
+$ git checkout <tag_name> 
+$ git tag -a <tag_name> -m "..." //add new tag
+$ git push --tags
+
+
+
