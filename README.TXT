@@ -18,3 +18,18 @@ $ git init
 
 --STATUS [TRACKING]
 $ git status
+
+--LOG [TIMELINE]
+$ git log
+
+--ADD NEW FILES TO REPO (STAGING)
+$ git <file_name>
+$ git add . //add everything
+$ git add --all //add new and removed files
+
+--COMMIT (SNAPSHOT)
+$ git commit -m "Create a README."
+
+
+
+
