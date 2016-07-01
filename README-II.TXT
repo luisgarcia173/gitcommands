@@ -60,3 +60,38 @@ $ git filter-branch --index-filter <shell_command>
 $ git filter-branch -f --prune-empty -- --all
 
 [[CHAPTER 4: WORK TOGETHER]]
+
+--LINE ENDING
+$ git config --global core.autocrlf input (Linux based)
+$ git config --global core.autocrlf true (Windows based)
+$ git config core.autocrlf false (Only Windows)
+
+--GIT ATTRIBUTES
+> Should use .gitattributes (file)
+ - *			text=auto
+ - *.html		text
+ - *.css		text
+ - *.bat		text eol=crlf
+ - *.sh			text eol=lf
+ - *.jpg		binary
+
+--CHERRY-PICK (USE SPECIFIC COMMIT IN ANOTHER BRANCH)
+$ git checkout <branch_name>
+$ git cherry-pick <sha_hash>
+
+--CHERRY-PICK EDIT COMMIT
+$ git cherry-pick --edit <sha_hash> (will be opened a popup to edit the comment)
+
+--CHERRY-PICK CUSTOMIZE COMMIT
+$ git cherry-pick --no-commit <sha_hash1> <sha_hash2> (combine two commits in one and add to staging area)
+
+--CHERRY-PICK TRACKING
+$ git cherry-pick -x <sha_hash> (add source hash to commit msg)
+
+--CHERRY-PICK SIGNING OFF
+$ git cherry-pick -signoff <sha_hash> (add source commiter to commit msg)
+ 
+[[CHAPTER 5: SUBMODULES]]
+
+[[CHAPTER 6: REFLOG]]
+
