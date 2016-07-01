@@ -1,27 +1,32 @@
 # README #
 
-### Files ###
-
+### FILES ###
 * Basics: Git common commands
 * Advanced: Git tips and tricks
 * GitHub: Usage
 
-### How do I get set up? ###
+## GIT REAL ##
+* [[CHAPTER 1: INTRODUCTION]]
+* [[CHAPTER 2: STAGING AND REMOTE]]
+* [[CHAPTER 3: CLONING AND BRANCHING]]
+* [[CHAPTER 4: COLLABORATION BASICS]]
+* [[CHAPTER 5: BRANCHING]]
+* [[CHAPTER 6: REBASE]]
+* [[CHAPTER 7: HISTORY AND CONFIGURATION]]
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+## GIT REAL II ##
+* [[CHAPTER 1: INTERACTIVE REBASE]]
+* [[CHAPTER 2: STASHING]]
+* [[CHAPTER 3: PURGING HISTORY]]
+* [[CHAPTER 4: WORK TOGETHER]]
+* [[CHAPTER 5: SUBMODULES]]
+* [[CHAPTER 6: REFLOG]] - SECOND LOG KEEPED IN LOCAL
 
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+## MASTERING GITHUB ##
+* [[CHAPTER 1: FORK BASED WORKFLOWS]]
+* [[CHAPTER 2: SINGLE REPOSITORY]]
+* [[CHAPTER 3: TAGS, BRANCHES AND RELEASES]]
+* [[CHAPTER 4: ISSUES, WIKI AND GITHUB PAGES]]
+* [[CHAPTER 5: MANAGING AND SECURING GITHUB]]
+* [[CHAPTER 6: AUTOMATING GITHUB]]
+* [[CHAPTER 7: COMMAND LINE]]
