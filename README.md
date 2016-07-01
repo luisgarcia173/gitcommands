@@ -1,12 +1,10 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+### Files ###
 
-### What is this repository for? ###
-
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* Basics: Git common commands
+* Advanced: Git tips and tricks
+* GitHub: Usage
 
 ### How do I get set up? ###
 
