@@ -89,9 +89,30 @@ $ git cherry-pick --no-commit <sha_hash1> <sha_hash2> (combine two commits in on
 $ git cherry-pick -x <sha_hash> (add source hash to commit msg)
 
 --CHERRY-PICK SIGNING OFF
-$ git cherry-pick -signoff <sha_hash> (add source commiter to commit msg)
+$ git cherry-pick --signoff <sha_hash> (add source commiter to commit msg)
  
 [[CHAPTER 5: SUBMODULES]]
+
+> It's needed to create the new repo first, a submodule is a separated repo that is shared for other projects.
+
+--ADDING A SUBMODULE TO THE PROJECT
+$ git submodule add <remote_address>
+
+--SEE SUBMODULES
+$ cat .gitmodules
+
+--CLONING PROJECTS
+$ git clone <remote_address>
+$ git submodule init
+$ git submodule update
+
+--PUSHING SUBMODULES
+$ git push --recursive-submodules=check
+$ git push --recursive-submodules=on-demand
+
+--ALIAS
+$ git cofig alias.pushall "push --recursive-submodules=on-demand"
+
 
 [[CHAPTER 6: REFLOG]]
 

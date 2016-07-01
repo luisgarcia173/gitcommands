@@ -76,6 +76,7 @@ $ git clone <remote_name> <new_local_name>
 
 --BRANCH
 $ git branch <branch_name> //create
+$ git branch <branch_name> <sha_hash> //create from hash (another commit)
 $ git checkout <branch_name> //move the pointer to new branch
 $ git checkout -b <branch_name> // create and move to new branch
 
