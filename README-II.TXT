@@ -33,12 +33,30 @@ $ git stash save --keep-index (will not appear on staging area)
 $ git stash save --include-untracked (allow untracked files to be stashed)
 
 --SHOW
+$ git stash list --stat
 $ git stash show <stash_name>
+$ git stash show <stash_name> --patch
 
 --BRANCHING
 $ git stash branch <branch_name> <stash_name> //should create a branch from stash
 $ git commit -am "..."
 
+[[CHAPTER 3: PURGING HISTORY]]
 
+> Should use only when commited files violate someone's copyright or large binary files, because it removes the commits history.
 
+--TREE FILTER (CHANGE->RECOMMIT)
+$ git filter-branch --tree-filter <shell_command>
+ -> --tree-filter 'rm -f passwords.txt' (for instance: bad files)
+ -> --tree-filter 'find . -name "*.mp4" -exec rm {} \;' (for instance: find/remove videos)
+$ git filter-branch --tree-filter <shell_command> -- --all (Exec the same cmd to all commits)
+$ git filter-branch -f --tree-filter <shell_command> //force
 
+--INDEX FILTER (CHANGE ON STAGING AREA)
+$ git filter-branch --index-filter <shell_command>
+ -> --index-filter 'git rm --cached --ignore-unmatch passwords.txt'
+ 
+--PRUNE EMPTY COMMITS
+$ git filter-branch -f --prune-empty -- --all
+
+[[CHAPTER 4: WORK TOGETHER]]
