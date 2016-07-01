@@ -17,10 +17,12 @@ $ git rebase -i HEAD~3 // -i (interactive mode), HEAD~3 (last 3 commits)
 
 --STASH (WORK IN PROGRESS)
 $ git stash save // save in a temp area, allow you to work in another branch
+$ git stash save "..."
 $ git stash apply // retrieve the code saved in temp area
 $ git stash list
 $ git stash drop // delete the top of saved stash
 $ git stash pop // the same of apply -> drop
+$ git stash clear // clear stash area
 
 --CONFLICTS
 $ git reset --hard HEAD
@@ -32,6 +34,11 @@ $ git stash save --include-untracked (allow untracked files to be stashed)
 
 --SHOW
 $ git stash show <stash_name>
+
+--BRANCHING
+$ git stash branch <branch_name> <stash_name> //should create a branch from stash
+$ git commit -am "..."
+
 
 
 
