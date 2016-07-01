@@ -107,12 +107,34 @@ $ git submodule init
 $ git submodule update
 
 --PUSHING SUBMODULES
-$ git push --recursive-submodules=check
-$ git push --recursive-submodules=on-demand
+$ git push --recurse-submodules=check
+$ git push --recurse-submodules=on-demand
 
 --ALIAS
-$ git cofig alias.pushall "push --recursive-submodules=on-demand"
+$ git config alias.pushall "push --recurse-submodules=on-demand"
 
+[[CHAPTER 6: REFLOG]] - SECOND LOG KEEPED IN LOCAL
 
-[[CHAPTER 6: REFLOG]]
+--LOST DATA
+$ git log --pretty=oneline
+$ git reset --hard <sha_hash>
+$ git reflog //(see local log)
+
+--RESTORE DATA
+$ git reflog
+$ git reset --hard <sha_hash> //or
+$ git reset --hard <id: HEAD@{1}>
+$ git log --pretty=oneline
+
+--DELETE BRANCH
+$ git branch -d <branch_name>
+$ git branch -D <branch_name>
+
+--BRANCH RECOVERY
+$ git branch <branch_name> <sha_hash> //(from last commit in the deleted branch) 
+$ git branch <branch_name> <shortname: HEAD@{1}>
+
+--WALK REFLOGS
+$ git log --walk-reflogs
+
 
