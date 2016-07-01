@@ -112,5 +112,66 @@ $ git checkout <tag_name>
 $ git tag -a <tag_name> -m "..." //add new tag
 $ git push --tags
 
+[[CHAPTER 6: REBASE]]
 
+--REBASE
+$ git rebase
+$ git rebase --continue
+$ git rebase --skip
+$ git rebase --abort
+
+[[CHAPTER 7: HISTORY AND CONFIGURATION]]
+
+--LOG
+$ git log
+$ git log --pretty=oneline
+$ git log --pretty=format:"%h %ad- %s [%an]"
+$ git log --oneline -p
+$ git log --oneline --stat
+$ git log --until=1.minute.ago
+$ git log --since=1.day.ago
+$ git log --since=1.hour.ago
+$ git log --since=1.month.ago --until=2.weeks.ago
+$ git log --since=2000-01-01 --until=2012-12-21
+
+--DIFF
+$ git diff HEAD //same of diff
+$ git diff HEAD^ //latest commit
+$ git diff HEAD~5 //five commits ago
+$ git diff HEAD^..HEAD // second most recent vs. most recent
+$ git diff <sha_hash1>..<sha_hash2> //using hash as diffId
+$ git diff <branch1> <branch2>
+$ git diff --since=1.week.ago --until=1.minute.ago
+
+--BLAME (SEE EACH CHANGE AND WHO DID IT)
+$ git blame <file_name> --date short
+
+--IGNORE FOLDERS/FILES
+> use the .git/info/exclude (folder)
+> use .gitignore (file)
+ - logs/*.log (to ignore logs for instance)
+ 
+--REMOVING FILES
+$ git rm <file_name> //staging
+$ git status //see the changes
+$ git commit -m "Removed file" //snapshot
+
+--UNTRACKING FILES
+$ git rm --cached <file_name> //will remove on remote repo, but not from local ( will not be tracked anymore)
+
+--CONFIG
+$ git config --list
+$ git config --global user.name "Luis Garcia"
+$ git config --global user.email "luisgarcia173@gmail.com"
+$ git config --global color.ui true
+$ git config --global core.editor emacs
+$ git config --global merge.tool opendiff
+
+--ALIAS (GET SHORT COMMANDS)
+$ git config --global alias.mylog "log --pretty=format:'%h %ad- %s [%an]' --graph"
+$ git config --global alias.lol "log --graph --decorate --pretty=oneline --abbrev-commit --all"
+$ git config --global alias.st status
+$ git config --global alias.co checkout
+$ git config --global alias.br branch
+$ git config --global alias.ci commit
 
